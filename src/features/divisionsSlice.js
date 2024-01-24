@@ -1,13 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const divisions = [
-  { id: 1, name: 'Division 1' },
-  { id: 2, name: 'Division 2' },
-  { id: 3, name: 'Division 3' },
-  { id: 4, name: 'Division 4' },
-  { id: 5, name: 'Division 5' },
+  { id: '1', name: '011 Atlanta' },
+  { id: '2', name: '014 Cincinnati' },
 ];
-
 const initialState = {
   divisions: divisions,
   selectedDivision: null,
@@ -19,7 +15,7 @@ const divisionsSlice = createSlice({
   reducers: {
     updateSelectedDivision(state, action) {
       const division = state.divisions.find(
-        (division) => division.id === Number(action.payload)
+        (division) => division.id === action.payload
       );
       state.selectedDivision = division;
     },
