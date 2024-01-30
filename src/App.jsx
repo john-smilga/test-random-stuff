@@ -1,11 +1,10 @@
-import Component from './Component';
+import Division from './Division';
 import District from './District';
 import SecondComponent from './SecondComponent';
 const App = () => {
   return (
     <div>
-      <Component />
-      <SecondComponent />
+      <Division />
       <District />
     </div>
   );

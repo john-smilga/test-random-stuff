@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import divisionsReducer from './features/divisionsSlice';
-import districtsReducer from './features/districtsSlice';
+// import divisionsReducer from './features/divisionsSlice';
+// import districtsReducer from './features/districtsSlice';
+import storesReducer from './features/storesSlice';
 export const store = configureStore({
   reducer: {
-    divisions: divisionsReducer,
-    districts: districtsReducer,
+    stores: storesReducer,
   },
 });

@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateSelectedDistrict } from './features/districtsSlice';
+import { updateSelectedDistrict } from './features/storesSlice';
 
 const District = () => {
   const dispatch = useDispatch();
-  const { divisions, selectedDivision } = useSelector(
-    (state) => state.divisions
-  );
-  const { districts, selectedDistrict } = useSelector(
-    (state) => state.districts
+  const { districts, selectedDivision, selectedDistrict } = useSelector(
+    (state) => state.stores
   );
 
   const handleChange = (event) => {
